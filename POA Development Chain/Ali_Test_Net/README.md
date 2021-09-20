@@ -28,7 +28,7 @@ This makes two keystore files for you with the following pattern:
 - Select "Clique - proof-of-authority" (i.e. '2')
 - Enter how many seconds should blocks take? (I put 3)
 
-![transaction-success](screenshots/screenshot01.png)
+![transaction-success](Screenshots/screenshot01.png)
 
 - Paste both account addresses from the first step one at a time into the list of accounts to seal.
 - Paste them again in the list of accounts to pre-fund. There are no block rewards in PoA, so you'll need to pre-fund.
@@ -38,7 +38,7 @@ This makes two keystore files for you with the following pattern:
 - Select 'Export genesis configurations' to create a JSON file containing your network information. (i.e. '2')
 - Hit Enter to create files in the current folder, and then Ctrl+C to exit.
 
-![transaction-success](screenshots/screenshot02.png)
+![transaction-success](Screenshots/screenshot02.png)
 
 - Now initialize the nodes with the genesis' json file.
 > geth --datadir node1 init alinet.json
@@ -46,7 +46,7 @@ This makes two keystore files for you with the following pattern:
 > geth --datadir node2 init alinet.json
 >
 
-![transaction-success](screenshots/screenshot03.png)
+![transaction-success](Screenshots/screenshot03.png)
 - Now the nodes can be used to begin mining blocks. Run the nodes in separate terminal windows with the commands:
 > geth --datadir node1 --unlock "SEALER_ONE_ADDRESS" --mine --rpc --allow-insecure-unlock
 >
@@ -55,7 +55,7 @@ This makes two keystore files for you with the following pattern:
 
 - By running the first command you'll see the screenshot bellow. Take the 'enode' address and pass it to the next command above.
 
-![transaction-success](screenshots/screenshot04.png)
+![transaction-success](Screenshots/screenshot04.png)
 
 
 * Commands I ran in my case:
@@ -79,12 +79,12 @@ This makes two keystore files for you with the following pattern:
 
 - This is how your private PoA blockchain looks like when you make it running:
 
-![transaction-success](screenshots/screenshot05.png)
+![transaction-success](Screenshots/screenshot05.png)
 
 ---
 ## MyCrypto setup
 - Run MyCrypto and hit 'Change network', and then select 'Add Custom Node'.
-![transaction-success](screenshots/screenshot06.png)
+![transaction-success](Screenshots/screenshot06.png)
 
 - Put your network configs running on your localhost.
 - Type ETH in the Currency box.
@@ -92,29 +92,29 @@ This makes two keystore files for you with the following pattern:
 - In the URL box type: http://127.0.0.1:8545. This points to the default RPC port on your local machine.
 - Finally, click 'Save & Use Custom Node'.
 
-![transaction-success](screenshots/screenshot07.png)
+![transaction-success](Screenshots/screenshot07.png)
 
 ##  Sending money between accounts
 
 - Import the keystore file from the node1/keystore directory into MyCrypto. This will import the private key.
-![transaction-success](screenshots/screenshot08.png)
+![transaction-success](Screenshots/screenshot08.png)
 
 - Locate to the folder where you placed your node1 private key and then import the file.
-![transaction-success](screenshots/screenshot09.png)
+![transaction-success](Screenshots/screenshot09.png)
 - Put your password which you protected your private key with (i.e. 123)
 - Now yu'll see the account information and the balance.
-![transaction-success](screenshots/screenshot10.png)
+![transaction-success](Screenshots/screenshot10.png)
 
 - Send a transaction from the node1 account to the node2 account.
-![transaction-success](screenshots/screenshot11.png)
-![transaction-success](screenshots/screenshot12.png)
+![transaction-success](Screenshots/screenshot11.png)
+![transaction-success](Screenshots/screenshot12.png)
 
 - You'll immediately se the transactiion details in the console.
-![transaction-success](screenshots/screenshot13.png)
+![transaction-success](Screenshots/screenshot13.png)
 
 - Click the 'Check TX Status' when the green message pops up, confirm the logout:
-![transaction-success](screenshots/screenshot14.png)
-![transaction-success](screenshots/screenshot15.png)
+![transaction-success](Screenshots/screenshot14.png)
+![transaction-success](Screenshots/screenshot15.png)
 
 ## Send and receive multi-node test transactions
 - Create node3 using the folowing code
@@ -124,15 +124,15 @@ This makes two keystore files for you with the following pattern:
 > 
 
 - Sending from node1 to node3
-![transaction-success](screenshots/screenshot19.png)
-![transaction-success](screenshots/screenshot20.png)
+![transaction-success](Screenshots/screenshot19.png)
+![transaction-success](Screenshots/screenshot20.png)
 
 - Sending from node1 to itself
-![transaction-success](screenshots/screenshot16.png)
+![transaction-success](Screenshots/screenshot16.png)
 
 - Sending from node2 to itself
-![transaction-success](screenshots/screenshot17.png)
-![transaction-success](screenshots/screenshot18.png)
+![transaction-success](Screenshots/screenshot17.png)
+![transaction-success](Screenshots/screenshot18.png)
 
 
 
